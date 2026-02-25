@@ -1,11 +1,9 @@
 import "./scss/App.scss";
-import DisplayTimer from "./components/Scoreboard/DisplayTimer";
+import StartGame from "./components/StartGame/StartGame";
 
 function App() {
 	return (
-		<div className="App">
-			<DisplayTimer />
-		</div>
+		<StartGame />
 	);
 }
 

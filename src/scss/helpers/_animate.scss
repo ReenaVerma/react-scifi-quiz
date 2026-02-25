@@ -1,4 +1,6 @@
-/* Slide Up */
+@use "./variables" as vars;
+
+// Slide up
 .animate {
 	animation-name: animate-slide;
 	animation-duration: 0.5s;
@@ -21,6 +23,10 @@
 	}
 }
 
+.delay-0 {
+	animation-delay: 0.1s;
+}
+
 .delay-1 {
 	animation-delay: 0.3s;
 }
@@ -37,9 +43,11 @@
 	animation-delay: 0.8s;
 }
 
+// Score
 .blink-soft {
-  	animation: blinker 1.5s linear infinite;
-	color: #42b3f4;
+  	animation: blinker 0.5s linear infinite;
+	color: vars.$space-blue;
+	font-size: 25px;
 }
 
 @keyframes blinker {
@@ -48,6 +56,7 @@
 	}
 }
 
+// play now button
 .animate-button {
 	animation-name: pulse;
 	animation-duration: 1s;
@@ -80,13 +89,17 @@
 
 @keyframes slide-right {
 	0% {
-		transform: translateX(100%); /* start offscreen right */
-		opacity: 0;                  /* invisible initially */
+		transform: translateX(100%);
+		opacity: 0;
 	}
 
 	100% {
-		transform: translateX(0);    /* end at natural position */
+		transform: translateX(0);
 		opacity: 1;
-		// font-style: normal;
 	}
+}
+
+.puzzle-reveal {
+	margin: 0px;
+	border: 0px;
 }

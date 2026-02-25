@@ -1,4 +1,5 @@
 @use "./helpers/animate";
+@use "./helpers/variables" as vars;
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 body {
@@ -9,40 +10,38 @@ body {
 		'slnt' 0,
 		'wdth' 100,
 		'CTRS' 0;
-	color: #fff;
+	color: vars.$white;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
+	background-color: vars.$white;
 
-.App {
-	background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/close-encounters-of-the-third-kind-devils-tower-michael-ver-sprill.jpg');
-	background-size: cover;
-	background-position: center;
-	height: 100vh;
-}
+	#bg-video {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+	}
 
-main {
-	border: 5px solid #000;
-	height: 100vh;
-}
+	h1 {
+		text-align: center;
+		font-weight: 480;
+		font-size: 50px;
+		margin-bottom: 0px;
+	}
 
-.intro {
-	margin-top: 50px;
-}
+	h2 {
+		text-align: center;
+		font-weight: 300;
+		margin-top: 0px;
+	}
 
-h1 {
-	text-align: center;
-	font-weight: 400;
-}
-
-h2 {
-	text-align: center;
-	font-weight: 300;
-}
-
-h3 {
-	text-align: center;
-	font-weight: 200;
+	h3 {
+		text-align: center;
+		font-weight: 200;
+	}
 }

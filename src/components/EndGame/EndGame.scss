@@ -1,0 +1,20 @@
+@use "../../scss/helpers/mixins" as mixins;
+
+.puzzle-ended {
+	@include mixins.flex(column, center, center);
+
+	span {
+		display: inline;
+		font-size: 24px;
+    	font-weight: 200
+	}
+
+	img {
+		height: 200px;
+		width: 200px;
+		margin-top: 50px;
+		border: 0px;
+		border-radius: 100%;
+		margin-top: 50px;
+	}
+}

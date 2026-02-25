@@ -1,0 +1,83 @@
+@use "../../scss/helpers/variables" as vars;
+@use "../../scss/helpers/mixins" as mixins;
+
+.puzzle {
+	width: 450px;
+	margin: 0 auto;
+	@include mixins.flex(row, center, center);
+	flex-wrap: wrap;
+
+	@media only screen and (max-width: 600px) {
+		width: 260px;
+		border: 0px solid vars.$white;
+	}
+
+	.error {
+		display: inline;
+		width: 100%;
+		text-align: center;
+		color: red;
+		margin-top: -10px;
+		margin-bottom: 10px;
+	}
+
+	.correct {
+		display: inline;
+		width: 100%;
+		text-align: center;
+		color: vars.$space-green;
+		margin-top: -10px;
+		margin-bottom: 20px;
+	}
+}
+
+img {
+	margin: 5px;
+	border: 1px solid vars.$image-yellow;
+	width: 100px;
+	height: 100px;
+	transition: margin 0.5s ease, border 1s ease; /* animate over 0.5s */
+
+	@media only screen and (max-width: 600px) {
+		border: 1px solid vars.$image-yellow;
+		width: 50px;
+		height: 50px;
+	}
+}
+
+form {
+	@include mixins.flex(row, space-between, center);
+	width: 100%;
+	margin: 40px 5px 5px 5px;
+
+	@media only screen and (max-width: 600px) {
+		width: 370px;
+		border: 0px solid vars.$white;
+	}
+
+	input[type="text"] {
+		width: 100%;
+		border: 1px solid vars.$light-grey;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		background-color: rgba(255, 255, 255, 0.2);
+		cursor: text;
+		color: vars.$white;
+		font-size: 25px;
+		outline: none;
+		height: 50px;
+		margin: 0 auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	button {
+		height: 55px;
+		width: 50px;
+		background-color: white;
+		color: vars.$darker-grey;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border: none;
+	}
+}

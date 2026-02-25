@@ -17,6 +17,10 @@
         @include mixins.flex(column, center, center);
         color: vars.$darker-grey; // neon text
         text-align: center;
+
+        @media only screen and (max-width: 600px) {
+			font-size: 14px;
+		}
     }
 
     button {

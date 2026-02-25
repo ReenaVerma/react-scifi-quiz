@@ -1,5 +1,3 @@
-import "./DisplayScore.scss";
-
 const DisplayScore = ({ score, gameStarted, animateScore }) => {
 	return (
 		<div

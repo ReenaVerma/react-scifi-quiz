@@ -70,14 +70,14 @@ const DisplayPuzzle = ({ score, setScore, puzzleIndex, setPuzzleIndex, audioRef 
 			audioRef.current = new Audio(require("../../assets/sounds/Incorrect.wav"));
 			audioRef.current.play();
 		}
-	}, [isWrong]);
+	}, [isWrong, audioRef]);
 
 	useEffect(() => {
 		if (isCorrect) {
 			audioRef.current = new Audio(require("../../assets/sounds/Correct.mp3"));
 			audioRef.current.play();
 		}
-	}, [isCorrect]);
+	}, [isCorrect, audioRef]);
 
 	return (
 		<div className="puzzle animate delay-1">

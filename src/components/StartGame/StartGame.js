@@ -21,13 +21,13 @@ const StartGame = () => {
 
 	function handleStart() {
 		setGameStarted(true);
+		setIsRunning(true);
+	}
 
-		// audioRef.current = new Audio(movieClips[puzzleIndex].sound);
-		// audioRef.current.play();
+	useEffect(() => {
+		if (!gameStarted || isGameEnded || animateScore) return;
 
 		const timer = setInterval(() => {
-			setIsRunning(true);
-
 			setTime((prevTime) => {
 				if (prevTime <= 1) {
 					clearInterval(timer);
@@ -37,7 +37,9 @@ const StartGame = () => {
 				return prevTime - 1;
 			});
 		}, 1000);
-	}
+
+		return () => clearInterval(timer);
+	}, [gameStarted, isGameEnded, animateScore]);
 
 	useEffect(() => {
 		if (time === 0) setIsGameEnded(true);

@@ -1,0 +1,14 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"jest": true
+	},
+	"extends": ["react-app", "eslint:recommended"],
+	"rules": {
+		"indent": ["error", "tab"],
+		"no-mixed-spaces-and-tabs": "error",
+		"brace-style": ["error", "1tbs", { "allowSingleLine": false }],
+		"semi": ["error", "always"]
+	}
+}

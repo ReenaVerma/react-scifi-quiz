@@ -1,0 +1,67 @@
+@use "../../scss/helpers/variables" as vars;
+
+.puzzle {
+	width: 450px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	@media only screen and (max-width: 600px) {
+		width: 370px;
+		border: 0px solid white;
+	}
+}
+
+img {
+	margin: 5px;
+	border: 1px solid vars.$image-yellow;
+	width: 100px;
+	height: 100px;
+
+	@media only screen and (max-width: 600px) {
+		border: 1px solid vars.$image-yellow;
+		width: 80px;
+		height: 80px;
+	}
+}
+
+form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin: 40px 5px 5px 5px;
+
+	@media only screen and (max-width: 600px) {
+		width: 370px;
+		border: 0px solid white;
+	}
+
+	input[type="text"] {
+		width: 100%;
+		border: 1px solid vars.$light-grey;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		background-color: rgba(255, 255, 255, 0.2);
+		cursor: text;
+		color: vars.$text-white;
+		font-size: 25px;
+		outline: none;
+		height: 50px;
+		margin: 0 auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	button {
+		height: 58px;
+		width: 50px;
+		background-color: vars.$light-grey;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+}
